@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="theme-color" content="#7a1a1f">
+<meta name="description" content="王氏族谱 · 24 世示例族谱，支持缩放平移、搜索定位、分支折叠，兼容手机">
+<title>王氏族谱 · 世代传承</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='18' fill='%237a1a1f'/><text x='50' y='72' font-size='62' text-anchor='middle' fill='%23f0c75e' font-family='serif'>族</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark">族</div>
+    <div class="brand-text">
+      <h1>王氏族谱</h1>
+      <p id="statLine"></p>
+    </div>
+  </div>
+  <div class="controls">
+    <div class="searchbox">
+      <input id="searchInput" type="search" placeholder="搜索族人姓名…" autocomplete="off" enterkeyhint="search">
+      <div id="searchResults" class="search-results hidden"></div>
+    </div>
+    <div class="zoom-group">
+      <button class="btn" id="zoomOut" title="缩小（-）">−</button>
+      <span id="zoomLabel">100%</span>
+      <button class="btn" id="zoomIn" title="放大（+）">＋</button>
+      <button class="btn" id="btnFit" title="适应整树">适应</button>
+      <button class="btn" id="btnFull" title="回到 100%">100%</button>
+    </div>
+    <div class="zoom-group">
+      <button class="btn" id="btnCollapseAll" title="收拢所有分支">收拢</button>
+      <button class="btn" id="btnExpandAll" title="展开所有分支">展开</button>
+      <button class="btn" id="btnPoem" title="查看字辈诗">字辈</button>
+    </div>
+    <div class="zoom-group">
+      <button class="btn" id="btnAdd" title="新增成员">＋新增</button>
+      <button class="btn" id="btnImport" title="导入 JSON 数据">导入</button>
+      <button class="btn" id="btnExport" title="导出 JSON 数据">导出</button>
+      <button class="btn" id="btnReset" title="重置为示例数据">重置</button>
+    </div>
+  </div>
+</header>
+
+<main id="treeArea">
+  <svg id="treeSvg" xmlns="http://www.w3.org/2000/svg"></svg>
+  <div class="hint">滚轮 / 双指缩放 · 拖拽平移 · 单击看详情 · 双击放大 · 点「−/＋」收放分支</div>
+  <div id="poemPop" class="poem-pop hidden"></div>
+</main>
+
+<aside id="detailPanel" class="detail-panel hidden">
+  <button id="detailClose" class="detail-close" title="关闭">×</button>
+  <div id="detailContent"></div>
+</aside>
+
+<div id="modalRoot"></div>
+
+<script src="js/data.js"></script>
+<script src="js/tidy-tree.js"></script>
+<script src="js/store.js"></script>
+<script src="js/editor.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
