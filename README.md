@@ -1,10 +1,10 @@
-# 林氏族谱网站 · 族谱 / 家谱 / Family Tree / Genealogy
+# 王氏族谱网站 · 族谱 / 家谱 / Family Tree / Genealogy
 
 **简体中文** | [English](README.en.md)
 
 > **开源、免费、离线可用的中文族谱（家谱）在线网站**：内置 **24 世（代）、453 人**示例族谱数据，采用 SVG 绘制世系树状图，支持**缩放平移、姓名搜索定位、分支折叠、只看此支**；数据以 **JSON** 格式**导入导出**，可在页面直接**新增、编辑、删除**成员（删除带**二次确认**）。纯 HTML/CSS/JavaScript 实现，**零框架、零第三方依赖、无需构建**，双击 `index.html` 即可使用，兼容手机浏览。
 
-![族谱全览](shots/desktop-full.png)
+![族谱全览](shots/desktop-4.png)
 
 ## 功能
 
@@ -96,29 +96,8 @@ family_tree/
 - 用页面上的「导入」直接加载你自己的 JSON（推荐）
 - 或编辑 `js/data.js` 的 `SURNAME` / `POEM` / `FOUNDER_YEAR` / `DEFAULT_SEED` 生成不同示例
 
-## 推送到 GitHub / Gitee
 
-在 GitHub、Gitee 上分别新建空仓库后，执行：
-
-```bash
-# 初始化并提交
-git init
-git add .
-git commit -m "feat: 族谱网站（24世示例数据 / JSON导入导出 / 增删改）"
-
-# GitHub
-git remote add github https://github.com/<你的用户名>/<仓库名>.git
-git push -u github main
-
-# Gitee
-git remote add gitee https://gitee.com/<你的用户名>/<仓库名>.git
-git push -u gitee main
-```
-
-> 提示：若仓库默认分支为 `master`，将上面命令中的 `main` 换成 `master`。
-> 两个平台可同时使用（双 remote），以后 `git push github main && git push gitee main` 即可同步。
-
-### 仓库简介（Description，直接复制粘贴）
+### 仓库简介
 
 **中文**：开源中文族谱（家谱）网站：24 世示例数据，SVG 世系树支持缩放平移、搜索定位、分支折叠，JSON 导入导出，成员增删改（删除二次确认），兼容手机，纯静态零依赖。
 
